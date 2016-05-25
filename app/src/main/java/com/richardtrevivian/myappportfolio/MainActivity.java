@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         Toast toast = Toast.makeText(getApplicationContext(), text, duration);
         toast.show();
     }
+    
 
     /*
     private void showSnackbar(View view, String string) {
