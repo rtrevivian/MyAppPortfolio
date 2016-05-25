@@ -1,11 +1,13 @@
 package com.richardtrevivian.myappportfolio;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,41 +38,16 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
-    public void onPopularMoviesButtonClicked(View view) {
-        toast(R.string.popular_movies);
+    public void displayToast(View view) {
+        Button button = (Button) view;
+        String buttonText = (String) button.getText();
+        Context context = getApplicationContext();
+        CharSequence text = String.format(getString(R.string.open_app), buttonText);
+        Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
     }
-
-    public void onStockHawkButtonClicked(View view) {
-        toast(R.string.stock_hawk);
-    }
-
-    public void onBuildItBiggerButtonClicked(View view) {
-        toast(R.string.build_it_bigger);
-    }
-
-    public void onMakeYourAppMaterialButtonClicked(View view) {
-        toast(R.string.make_your_app_material);
-    }
-
-    public void onGoUbiquitousButtonClicked(View view) {
-        toast(R.string.go_ubiquitous);
-    }
-
-    public void onCapstoneButtonClicked(View view) {
-        toast(R.string.capstone);
-    }
-
-    private void toast(int id) {
-        CharSequence text = String.format(getString(R.string.coming_soon), getString(id));
-        int duration = Toast.LENGTH_SHORT;
-        Toast toast = Toast.makeText(getApplicationContext(), text, duration);
-        toast.show();
-    }
-
 
     /*
     private void showSnackbar(View view, String string) {
