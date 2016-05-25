@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,50 +8,46 @@
     tools:context="com.richardtrevivian.myappportfolio.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-            <LinearLayout
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_margin"
+            android:orientation="vertical">
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/activity_margin"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/my_nanodegree_apps"
-                    android:textSize="24dp"/>
-                <Button
-                    style="@style/AppButton"
-                    android:text="@string/popular_movies"
-                    android:onClick="onPopularMoviesButtonClicked"/>
-                <Button
-                    style="@style/AppButton"
-                    android:text="@string/stock_hawk"
-                    android:onClick="onStockHawkButtonClicked"/>
-                <Button
-                    style="@style/AppButton"
-                    android:text="@string/build_it_bigger"
-                    android:onClick="onBuildItBiggerButtonClicked"/>
-                <Button
-                    style="@style/AppButton"
-                    android:text="@string/make_your_app_material"
-                    android:onClick="onMakeYourAppMaterialButtonClicked"/>
-                <Button
-                    style="@style/AppButton"
-                    android:text="@string/go_ubiquitous"
-                    android:onClick="onGoUbiquitousButtonClicked"/>
-                <Button
-                    style="@style/AppButton"
-                    android:text="@string/capstone"
-                    android:onClick="onCapstoneButtonClicked"/>
-            </LinearLayout>
-        </RelativeLayout>
-    </ScrollView>
+                android:text="@string/my_nanodegree_apps"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp"/>
+            <Button
+                style="@style/AppButton"
+                android:text="@string/popular_movies"
+                android:onClick="onPopularMoviesButtonClicked"/>
+            <Button
+                style="@style/AppButton"
+                android:text="@string/stock_hawk"
+                android:onClick="onStockHawkButtonClicked"/>
+            <Button
+                style="@style/AppButton"
+                android:text="@string/build_it_bigger"
+                android:onClick="onBuildItBiggerButtonClicked"/>
+            <Button
+                style="@style/AppButton"
+                android:text="@string/make_your_app_material"
+                android:onClick="onMakeYourAppMaterialButtonClicked"/>
+            <Button
+                style="@style/AppButton"
+                android:text="@string/go_ubiquitous"
+                android:onClick="onGoUbiquitousButtonClicked"/>
+            <Button
+                style="@style/AppButton"
+                android:text="@string/capstone"
+                android:onClick="onCapstoneButtonClicked"/>
+        </LinearLayout>
+    </RelativeLayout>
 
-</FrameLayout>
+</ScrollView>
