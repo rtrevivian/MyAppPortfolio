@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onStockHawkButtonClicked(View view) {
-        toast(R.string.capstone);
+        toast(R.string.stock_hawk);
     }
 
     public void onBuildItBiggerButtonClicked(View view) {
